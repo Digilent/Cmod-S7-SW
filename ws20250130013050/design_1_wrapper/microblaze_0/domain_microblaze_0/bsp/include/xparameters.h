@@ -1,0 +1,55 @@
+#ifndef XPARAMETERS_H   /* prevent circular inclusions */
+#define XPARAMETERS_H   /* by using protection macros */
+
+#define XPAR_XSYSMON_NUM_INSTANCES 1
+
+/* Definitions for peripheral XADC_WIZ_0 */
+#define XPAR_XADC_WIZ_0_COMPATIBLE "xlnx,xadc-wiz-3.3"
+#define XPAR_XADC_WIZ_0_BASEADDR 0x44a00000
+#define XPAR_XADC_WIZ_0_HIGHADDR 0x44a0ffff
+#define XPAR_XADC_WIZ_0_INCLUDE_INTR 0x1
+#define XPAR_XADC_WIZ_0_IP_TYPE 0x0
+
+/* Canonical definitions for peripheral XADC_WIZ_0 */
+#define XPAR_XSYSMON_0_BASEADDR 0x44a00000
+#define XPAR_XSYSMON_0_HIGHADDR 0x44a0ffff
+#define XPAR_XSYSMON_0_COMPATIBLE "xlnx,xadc-wiz-3.3"
+#define XPAR_XSYSMON_0_INCLUDE_INTR 0x1
+#define XPAR_XSYSMON_0_IP_TYPE 0x0
+
+#define XPAR_XUARTLITE_NUM_INSTANCES 1
+
+/* Definitions for peripheral AXI_UARTLITE_0 */
+#define XPAR_AXI_UARTLITE_0_COMPATIBLE "xlnx,axi-uartlite-2.0"
+#define XPAR_AXI_UARTLITE_0_BASEADDR 0x40600000
+#define XPAR_AXI_UARTLITE_0_HIGHADDR 0x4060ffff
+#define XPAR_AXI_UARTLITE_0_BAUDRATE 0x2580
+#define XPAR_AXI_UARTLITE_0_USE_PARITY 0x0
+#define XPAR_AXI_UARTLITE_0_ODD_PARITY 0x0
+#define XPAR_AXI_UARTLITE_0_DATA_BITS 0x8
+
+/* Canonical definitions for peripheral AXI_UARTLITE_0 */
+#define XPAR_XUARTLITE_0_BASEADDR 0x40600000
+#define XPAR_XUARTLITE_0_HIGHADDR 0x4060ffff
+#define XPAR_XUARTLITE_0_BAUDRATE 0x2580
+#define XPAR_XUARTLITE_0_COMPATIBLE "xlnx,axi-uartlite-2.0"
+#define XPAR_XUARTLITE_0_DATA_BITS 0x8
+#define XPAR_XUARTLITE_0_ODD_PARITY 0x0
+#define XPAR_XUARTLITE_0_USE_PARITY 0x0
+
+/*  BOARD definition */
+#define XPS_BOARD_CMOD-S7-25
+
+#define XPAR_LMB_BRAM_0_BASEADDRESS 0x0
+#define XPAR_LMB_BRAM_0_HIGHADDRESS 0xffff
+#define XPAR_CPU_CORE_CLOCK_FREQ_HZ 100000000
+
+#define XPAR_MICROBLAZE_ADDR_SIZE 32
+
+#define STDOUT_BASEADDRESS 0x40600000
+#define STDIN_BASEADDRESS 0x40600000
+
+/* Device ID */
+#define XPAR_DEVICE_ID "7s25"
+
+#endif  /* end of protection macro */
