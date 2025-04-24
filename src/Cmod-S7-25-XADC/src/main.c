@@ -11,8 +11,9 @@
 #include "xil_printf.h"
 #include "xil_cache.h"
 #include "sleep.h"
+#include "platform.h"
 
-#define XADC_DEVICE_ID (XPAR_XADC_WIZ_0_DEVICE_ID)
+#define XADC_DEVICE_ID (XPAR_XADC_WIZ_0_BASEADDR /*XPAR_XADC_WIZ_0_DEVICE_ID*/)
 
 // TODO: create an "xadc/" subdirectory of project src. make as portable to other boards/xadc configs as possible
 typedef struct XadcInfo {
@@ -104,6 +105,8 @@ int main() {
 	int Xadc_VoltageRemainder;
 	int i;
 
+    // Baudrate: 9600
+    //init_platform();
 	EnableCaches();
 	xil_printf("Initializing Cmod S7-25 XADC Demo...\n\r");
 	Xadc_Init(&Xadc_Ctrl, CmodS7_XadcInfo, NumChannels, XADC_DEVICE_ID);
@@ -129,7 +132,7 @@ int main() {
 		usleep(100000); // wait 100ms
 	}
 	DisableCaches();
-
+    //cleanup_platform();
 	return 0;
 }
 
